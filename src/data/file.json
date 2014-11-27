@@ -1,5 +1,5 @@
 {
-  "key1":"data1",
-  "key2":"data2",
-  "key3":"data3"
+  "key_string":"data1",
+  "key_integer": 12345,
+  "key_boolean": false
 }
