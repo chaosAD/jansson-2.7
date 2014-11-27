@@ -812,7 +812,7 @@ configure:11841: $? = 0
 configure:11841: result: yes
 configure:11841: checking for sched_yield
 configure:11841: gcc -o conftest.exe -g -O2   conftest.c  >&5
-C:\DOCUME~1\D300-01\LOCALS~1\Temp\cc0DPRow.o: In function `main':
+C:\DOCUME~1\D300-01\LOCALS~1\Temp\cciESIYJ.o: In function `main':
 c:\Documents and Settings\D300-01\Desktop\Venom\Projects\jansson-2.7/conftest.c:71: undefined reference to `sched_yield'
 collect2.exe: error: ld returned 1 exit status
 configure:11841: $? = 1
@@ -933,6 +933,7 @@ config.status:1126: creating test/bin/Makefile
 config.status:1126: creating test/suites/Makefile
 config.status:1126: creating test/suites/api/Makefile
 config.status:1126: creating jansson_private_config.h
+config.status:1307: jansson_private_config.h is unchanged
 config.status:1355: executing depfiles commands
 config.status:1355: executing libtool commands
 

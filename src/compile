@@ -1,0 +1,2 @@
+#! /bin/sh
+gcc test_jansson.c -llibjansson -L.libs
