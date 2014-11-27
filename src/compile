@@ -1,3 +1,0 @@
-#! /bin/sh
-gcc -o .libs/test_jansson.exe test_jansson.c -llibjansson -L.libs
-./.libs/test_jansson.exe

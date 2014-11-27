@@ -14,10 +14,10 @@ int main() {
   void *iter;
   const char *key;
   char *str = NULL;
-  int value, boolean;
+  int value, boolean, len;
 
   // Load the file
-  json = json_load_file("data/file.json", 0, &error);
+  json = json_load_file("src/data/file.json", 0, &error);
   if(!json) { // If NULL then loading is unsuccessful
     dump_json_error(&error);    // Display the error
     return -1;
@@ -40,15 +40,14 @@ int main() {
   key = json_object_iter_key(iter);
   printf("key:%s\n", key);
   json_obj = json_object_iter_value(iter);
-  // Print only when the 'value' is a string
+  // Print only when the 'value' is an integer
   if(json_is_integer(json_obj))
     printf("value:%d\n", json_integer_value(json_obj));
 
 
-  json_unpack(json, "{s:s, s:i, s:b}", "key_string", &str, "key_integer", &value, "key_boolean", &boolean);
+  json_unpack(json, "{s:s%, s:i, s:b}", "key_string", &str, &len, "key_integer", &value, "key_boolean", &boolean);
+  printf("key_string:%s(%d), key_integer:%d, key_boolean:%d", str, len, value, boolean);
+
   json_decref(json);
-
-  printf("key_string:%s, key_integer:%d, key_boolean:%d", str, value, boolean);
-
   return 0;
 }

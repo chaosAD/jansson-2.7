@@ -1,9 +1,31 @@
+kaosad (27/11/14)
+=================
+
+Before continuing, make sure you have installed Mingw32 and its msys.
+(Note: '''make''' in msys is needed for building the project).
+
+To configure and then build, under windows' cmd prompt type::
+
+   > sh configure
+   > make
+
+This will build the jansson's library and DLL which is located in
+'''src/.lib/''' folder. To install the required DLL into the windows'
+system, type::
+
+   > sh install_it
+
+To compile '''test_jansson.c''' example and run it, type::
+
+   > sh compile_it
+
+
 Jansson README
 ==============
 
 .. image:: https://travis-ci.org/akheron/jansson.png
   :target: https://travis-ci.org/akheron/jansson
-  
+
 .. image:: https://ci.appveyor.com/api/projects/status/lmhkkc4q8cwc65ko
   :target: https://ci.appveyor.com/project/akheron/jansson
 
